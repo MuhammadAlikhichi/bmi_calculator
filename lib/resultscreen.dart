@@ -4,10 +4,10 @@ import 'RepeatContainer.dart';
 import 'inputpage.dart';
 
 class ResultScreen extends StatelessWidget {
-//  resultscreen({@required this.bmiresult, this.final_result, this.suggestion});
-//  final String bmiresult;
-//  final String final_result;
-//  final String suggestion;
+  ResultScreen({@required this.bmiresult, this.finalresult, this.suggestion});
+ final String bmiresult;
+  final String finalresult;
+  final String suggestion;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +36,9 @@ class ResultScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('Normal', style: Result1),
-                    Text('18.0', style: Result2),
-                    Text('BMI is low you should have work more',
+                    Text(finalresult.toUpperCase(), style: Result1),
+                    Text(bmiresult, style: Result2),
+                    Text(suggestion,
                       textAlign: TextAlign.center,
                     ),
                   ],

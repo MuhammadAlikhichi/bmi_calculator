@@ -5,6 +5,7 @@ import 'RepeatContainer.dart';
 import 'Repeattexticon.dart';
 import 'constentfile.dart';
 import 'resultscreen.dart';
+import 'calculateBMi.dart';
 enum Gender{
   male,
   female,
@@ -193,7 +194,13 @@ class _InputPageState extends State<InputPage> {
           )),
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ResultScreen()));
+              CalculateBMI calc=CalculateBMI(height: sliderHeight,weight: sliderWeight);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ResultScreen(
+                bmiresult: calc.Calculation(),
+                finalresult: calc.get_bmi(),
+                suggestion: calc.get_suggestion(),
+
+              )));
             },
             child: Container(
               child: Center(
