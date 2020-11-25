@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class InputPage extends StatefulWidget {
   @override
@@ -13,10 +14,42 @@ class _InputPageState extends State<InputPage> {
       ),
       body: Column(
         children: [
-          Expanded(child: null,),
-          Expanded(child: null,),
-          Expanded(child: null,),
+          Expanded(child: Row(
+            children: [
+              Expanded(child: RepeatContainerCode(
+                colors: Colors.brown,
+              ),
+              ),
+              Expanded(child: RepeatContainerCode(colors: Colors.brown,),
+              ),
+            ],
+          )),
+          Expanded(child: RepeatContainerCode(colors: Colors.brown,),
+          ),
+          Expanded(child: Row(
+            children: [
+              Expanded(child: RepeatContainerCode(colors: Colors.brown,),
+              ),
+              Expanded(child: RepeatContainerCode(colors: Colors.brown,),
+              ),
+            ],
+          )),
         ],
+      ),
+    );
+  }
+}
+
+class RepeatContainerCode extends StatelessWidget {
+  RepeatContainerCode({@required this.colors});
+  Color colors;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+        color: Colors.brown,
+        borderRadius: BorderRadius.circular(10.0)
       ),
     );
   }
