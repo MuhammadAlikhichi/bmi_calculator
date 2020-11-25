@@ -1,4 +1,6 @@
+import 'package:bmi_calculator/constentfile.dart';
 import 'package:flutter/material.dart';
+import 'constentfile.dart';
 class Repeartexticoncode extends StatelessWidget {
   Repeartexticoncode({@required this.iconData,this.Label});
   final IconData iconData;
@@ -16,10 +18,7 @@ class Repeartexticoncode extends StatelessWidget {
         ),
         SizedBox(height: 15.0),
         Text(Label,
-          style: TextStyle(
-            fontSize: 30.0,
-            color: Colors.grey,
-          ),
+          style: kLabelstyle,
         )
       ],
     );
