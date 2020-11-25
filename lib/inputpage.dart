@@ -15,21 +15,22 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleColor =deActiveColor;
-  Color FeMaleColor =deActiveColor;
-  void updateColor(Gender gendertype){
-    if(gendertype==Gender.male)
-      {
-        maleColor=activeColor;
-        FeMaleColor=deActiveColor;
-      }
-    if(gendertype==Gender.female)
-      {
-        maleColor=deActiveColor;
-        FeMaleColor=activeColor;
-      }
-
-  }
+  Gender selectGender;
+//  Color maleColor =deActiveColor;
+//  Color FeMaleColor =deActiveColor;
+//  void updateColor(Gender gendertype){
+//    if(gendertype==Gender.male)
+//      {
+//        maleColor=activeColor;
+//        FeMaleColor=deActiveColor;
+//      }
+//    if(gendertype==Gender.female)
+//      {
+//        maleColor=deActiveColor;
+//        FeMaleColor=activeColor;
+//      }
+//
+//  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,11 +44,11 @@ class _InputPageState extends State<InputPage> {
               Expanded(child: GestureDetector(
                 onTap: (){
                   setState(() {
-                    updateColor(Gender.male);
+                    selectGender=Gender.male;
                   });
                 },
                 child: RepeatContainerCode(
-                  colors: maleColor,
+                  colors: selectGender==Gender.male?activeColor:deActiveColor,
                   cardwidge: Repeartexticoncode(
                     iconData: FontAwesomeIcons.male,
                     Label:' MALE',
@@ -59,11 +60,11 @@ class _InputPageState extends State<InputPage> {
               Expanded(child: GestureDetector(
                 onTap: (){
                   setState(() {
-                    updateColor(Gender.female);
+                    selectGender=Gender.female;
                   });
                 },
                 child: RepeatContainerCode(
-                  colors: FeMaleColor,
+                  colors: selectGender==Gender.male?activeColor:deActiveColor,
                   cardwidge: Repeartexticoncode(
                     iconData: FontAwesomeIcons.male,
                     Label:' FEMALE',
