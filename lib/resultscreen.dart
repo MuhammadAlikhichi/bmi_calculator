@@ -36,7 +36,7 @@ class ResultScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(finalresult.toUpperCase(), style: Result1),
+                    Text(finalresult, style: Result1),
                     Text(bmiresult, style: Result2),
                     Text(suggestion,
                       textAlign: TextAlign.center,
