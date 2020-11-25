@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'RepeatContainer.dart';
 import 'Repeattexticon.dart';
 import 'constentfile.dart';
+import 'resultscreen.dart';
 enum Gender{
   male,
   female,
@@ -190,6 +191,20 @@ class _InputPageState extends State<InputPage> {
               ),
             ],
           )),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => resultscreen()));
+            },
+            child: Container(
+              child: Center(
+                child: Text('Calculate', style: klargebuttonstyle),
+              ),
+              color: Colors.deepOrange,
+              height: 60,
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 10),
+            ),
+          ),
         ],
       ),
     );
