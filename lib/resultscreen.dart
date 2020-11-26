@@ -54,7 +54,7 @@ class ResultScreen extends StatelessWidget {
                   child: Center(
                     child: Text('ReCalculate', style: klargebuttonstyle),
                   ),
-                  color: Colors.deepOrange,
+                  color: Colors.pink,
                   height: 60,
                   width: double.infinity,
                   margin: EdgeInsets.only(top: 10),

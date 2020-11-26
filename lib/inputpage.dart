@@ -20,21 +20,6 @@ class _InputPageState extends State<InputPage> {
   int sliderHeight=180;
   int sliderWeight=60;
   int sliderAge=20;
-//  Color maleColor =deActiveColor;
-//  Color FeMaleColor =deActiveColor;
-//  void updateColor(Gender gendertype){
-//    if(gendertype==Gender.male)
-//      {
-//        maleColor=activeColor;
-//        FeMaleColor=deActiveColor;
-//      }
-//    if(gendertype==Gender.female)
-//      {
-//        maleColor=deActiveColor;
-//        FeMaleColor=activeColor;
-//      }
-//
-//  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +55,7 @@ class _InputPageState extends State<InputPage> {
                       selectGender=Gender.female;
                     });
                   },
-                  colors: selectGender==Gender.male?activeColor:deActiveColor,
+                  colors: selectGender==Gender.female?activeColor:deActiveColor,
                   cardwidge: Repeartexticoncode(
                     iconData: FontAwesomeIcons.male,
                     Label:' FEMALE',
@@ -82,7 +67,7 @@ class _InputPageState extends State<InputPage> {
             ],
           )),
           Expanded(child: RepeatContainerCode(
-            colors: Colors.brown,
+            colors: Color(0xFF1D1E33),
             cardwidge: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -120,7 +105,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(child: Row(
             children: [
-              Expanded(child: RepeatContainerCode(colors: Colors.brown,
+              Expanded(child: RepeatContainerCode( colors: Color(0xFF1D1E33),
                 cardwidge: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -155,7 +140,7 @@ class _InputPageState extends State<InputPage> {
                 ),
               ),
               ),
-              Expanded(child: RepeatContainerCode(colors: Colors.brown,
+              Expanded(child: RepeatContainerCode( colors: Color(0xFF1D1E33),
                 cardwidge: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -206,7 +191,7 @@ class _InputPageState extends State<InputPage> {
               child: Center(
                 child: Text('Calculate', style: klargebuttonstyle),
               ),
-              color: Colors.deepOrange,
+              color: Colors.pink,
               height: 60,
               width: double.infinity,
               margin: EdgeInsets.only(top: 10),

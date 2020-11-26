@@ -12,7 +12,7 @@ class RepeatContainerCode extends StatelessWidget {
         margin: EdgeInsets.all(15.0),
         child: cardwidge,
         decoration: BoxDecoration(
-            color: Colors.brown,
+            color: colors,
             borderRadius: BorderRadius.circular(10.0)
         ),
       ),
